@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+
+
+  text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+  background: #ffff;
+}
+
+nav {
+  padding-top: 15px;
+  max-width: 1400px;
+
+  .menu-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 50px;
+
+    a {
+      color: #4ad295;
+      position: relative;
+    }
+
+    span {
+      position: relative;
+      opacity: 0.8;
+      
+      ::after {
+        content: url("../assets/img/ball.svg");
+        position: absolute;
+        top: 0;
+        right: -25px;
+        transition: 1s ease;
+      }
+    }
+
+
+    :hover{
+        opacity: 1;
+        
+        ::after{
+            transform: rotate(360deg);
+            right: -50px;
+            transition: 2s ease;
+        }
+    }
+
+  }
+}
+
+
+section{
+    margin-top:50px;
+    padding: 20px;
+    border: 1px solid;
+    max-width:1000px;
+    height: 100%;
+}
