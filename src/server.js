@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
 const handlebars = require('express-handlebars')
-const bodyParser = require("body-parser")
+const bodyParser = require("body-parser");
+const { static } = require('express');
 //Config
     //Body-Parser
         app.use(bodyParser.json())
@@ -10,14 +11,15 @@ const bodyParser = require("body-parser")
         app.engine('handlebars',handlebars({defaultLayout:'main'}))
         app.set('view engine','handlebars')
 
-
+    //Static
+        app.use(express.static('public'))
 
 //Rotas
     //Get
         app.get("/",(req,res)=>{
             res.render('home')
         })
-
+    
 
 //Inicializando o servidor na porta 3000
 app.listen(3000,()=>{
