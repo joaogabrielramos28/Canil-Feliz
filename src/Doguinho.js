@@ -10,6 +10,9 @@ const Cachorro = conexao.sequelize.define('cachorros',{
     idade:{
         type:conexao.Sequelize.STRING
     },
+    telefone:{
+        type:conexao.Sequelize.STRING
+    },
     raça:{
         type:conexao.Sequelize.STRING
     },
