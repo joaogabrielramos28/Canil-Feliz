@@ -1,4 +1,4 @@
-//*! Pegando dados da api do governo 
+//*! Pegando dados da api do IBGE
 // * Pegando os estados
 const select = document.querySelector("select")
 function pegaEstados(){
