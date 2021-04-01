@@ -19,6 +19,10 @@ const { static } = require('express');
         app.get("/",(req,res)=>{
             res.render('home')
         })
+
+        app.get("/registro-doguinho",(req,res)=>{
+            res.render('registro')
+        })
     
 
 //Inicializando o servidor na porta 3000
