@@ -62,21 +62,98 @@ body {
 
 section {
   background-color: #ffff;
-  height: 100vh;
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 750px;
   border-radius: 5px;
 }
 
 section .cadastro {
   padding: 0 20px;
   padding-top: 35PX;
-  width: 900px;
+  max-width: 650px;
   margin: 0 auto;
 }
 
 section h1 {
+  text-align: center;
   color: #000;
-  width: 200px;
+}
+
+section form {
+  margin-top: 35px;
+}
+
+section form legend {
+  margin-bottom: 15px;
+  color: #000;
+}
+
+section form .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section form .form-group .form + .form {
+  margin-left: 24px;
+}
+
+section form .form {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: start;
+}
+
+section form .form input, section form .form select, section form .form textarea {
+  background-color: #f0f0f5;
+  border: 0;
+  padding: 10px 26px;
+  font-size: 16px;
+  border-radius: 8px;
+  outline: none;
+}
+
+section form .form select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+section form .form label {
+  margin-bottom: 10px;
+}
+
+section form .submit {
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section form .submit button {
+  width: 260px;
+  height: 56px;
+  border-radius: 5px;
+  background-color: #4ad295;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border: 0;
+  margin-top: 40px;
 }
 /*# sourceMappingURL=registro.css.map */

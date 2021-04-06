@@ -48,21 +48,86 @@ body{
 
 section{
     background-color: #ffff;
-    height: 100vh;
-    margin: 0 auto;
-    max-width:1000px;
+    margin:0 auto;
+    max-width:750px;
     border-radius: 5px;
 
 
     .cadastro{
         padding:0 20px;
         padding-top: 35PX;
-        width:900px;
+        max-width: 650px;
         margin: 0 auto;
         
     }
     h1{
+        text-align: center;
         color: #000;
-        width:200px;
+    }
+
+    form{
+        margin-top: 35px;
+
+        legend{
+            margin-bottom: 15px;
+            color: #000;
+        }
+        .form-group{
+            display: flex;
+            
+            .form + .form{
+                margin-left:24px;
+            }
+        }
+
+        .form{
+            flex: 1;
+            margin-bottom:30px;
+            display: flex;
+            flex-direction: column;
+            text-align: start;
+            input,select,textarea{
+                background-color: #f0f0f5;
+                border: 0;
+                padding: 10px 26px;
+                font-size: 16px;
+            
+                border-radius: 8px;
+            
+                outline: none;
+            }
+            select{
+                appearance:none;
+            }
+
+            label{
+                margin-bottom: 10px;
+            }
+        }
+        .submit{
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            button{
+                width: 260px;
+                height: 56px;
+                border-radius: 5px;
+    
+                background-color: #4ad295;
+    
+                color: white;
+                font-weight: bold;
+                font-size: 16px;
+            
+                border: 0;
+            
+                margin-top: 40px;
+            
+    
+            }
+        }
+        
     }
 }
+
