@@ -132,6 +132,10 @@ section form .form label {
   margin-bottom: 10px;
 }
 
+section form .form input[type='file'] {
+  padding: 7px 10px;
+}
+
 section form .submit {
   margin-bottom: 30px;
   display: -webkit-box;
@@ -154,6 +158,6 @@ section form .submit button {
   font-weight: bold;
   font-size: 16px;
   border: 0;
-  margin-top: 40px;
+  margin-bottom: 35px;
 }
 /*# sourceMappingURL=registro.css.map */

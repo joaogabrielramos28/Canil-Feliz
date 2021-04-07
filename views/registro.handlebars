@@ -27,26 +27,30 @@
                      <input type="text">
                  </div>
                 </div>  
-                 <div class="form">
-                     <label for="">Telefone</label>
-                     <input type="tel">
-                </div>
 
                 <div class="form-group">
                     <div class="form">
                         <label for="">Estado</label>
-                        <select name="" id=""></select>
+                        <select name="" class="estados"><option value="default">Selecione um Estado</option></select>
                     </div>
                     <div class="form">
                         <label for="">Município</label>
-                        <select name="" id=""></select>
+                        <select name="" class="municipios" disabled='true'><option>Selecione um Municipio</option></select>
                     </div>
                 </div>
 
-                <div class="form">
+                <div class="form-group">
+                    <div class="form">
+                     <label for="">Telefone</label>
+                     <input type="tel">
+                    </div>
+
+                    <div class="form">
                     <label for="">Imagem</label>
-                    <input type="file">
+                    <input type="file" accept=".jpg,.svg,.jpeg,.png">
+                    </div>
                 </div>
+                
 
                 <div class="form">
                     <label for="">Descrição</label>
@@ -61,5 +65,7 @@
     
    
 </section>
+
+<script src="scripts/script.js"></script>
 
 
