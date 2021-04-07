@@ -19,12 +19,12 @@
                 </div>
                 <div class="form-group">
                  <div class="form">
-                     <label for="">Raça</label>
-                     <input type="text" required>
+                     <label for="raça">Raça</label>
+                     <input type="text" required name="raça">
                  </div>
                  <div class="form">
-                     <label for="">Idade</label>
-                     <input type="text" required>
+                     <label for="idade">Idade</label>
+                     <input type="text" name="idade" required maxlength="2">
                  </div>
                 </div>  
 
@@ -34,27 +34,27 @@
                         <select name="estado" class="estados" required><option value="default">Selecione um Estado</option></select>
                     </div>
                     <div class="form">
-                        <label for="">Município</label>
-                        <select name="" class="municipios" disabled='true' required><option>Selecione um Municipio</option></select>
+                        <label for="municipio">Município</label>
+                        <select name="municipio" class="municipios" disabled='true' required><option>Selecione um Municipio</option></select>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="form">
-                     <label for="">Telefone</label>
-                     <input type="tel" required autocomplete="tel">
+                     <label for="telefone">Telefone</label>
+                     <input type="tel" required autocomplete="tel" name="telefone" maxlength="11">
                     </div>
 
                     <div class="form">
-                    <label for="">Imagem</label>
-                    <input type="file" accept=".jpg,.svg,.jpeg,.png" required>
+                    <label for="imagem">Imagem</label>
+                    <input type="file" name="imagem" accept=".jpg,.svg,.jpeg,.png" required>
                     </div>
                 </div>
                 
 
                 <div class="form">
-                    <label for="">Descrição</label>
-                    <textarea name="" id="" cols="20" rows="5" required></textarea>
+                    <label for="descricao">Descrição</label>
+                    <textarea cols="20" name="descricao" rows="5" required></textarea>
                 </div>
 
                <div class="submit">
