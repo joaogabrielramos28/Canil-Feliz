@@ -23,6 +23,10 @@ const { static } = require('express');
         app.get("/registro-doguinho",(req,res)=>{
             res.render('registro')
         })
+
+        app.get("/doguinhos",(req,res)=>{
+            res.render("dogs")
+        })
     
 
 //Inicializando o servidor na porta 3000
