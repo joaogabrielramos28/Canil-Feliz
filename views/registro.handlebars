@@ -14,47 +14,47 @@
          <form action="">
              <legend><h3>Dados do doguinho</h3></legend>
                  <div class="form">
-                     <label for="">Nome</label>
-                     <input type="text">
+                     <label for="nome">Nome</label>
+                     <input type="text" name="nome" required>
                 </div>
                 <div class="form-group">
                  <div class="form">
                      <label for="">Raça</label>
-                     <input type="text">
+                     <input type="text" required>
                  </div>
                  <div class="form">
                      <label for="">Idade</label>
-                     <input type="text">
+                     <input type="text" required>
                  </div>
                 </div>  
 
                 <div class="form-group">
                     <div class="form">
-                        <label for="">Estado</label>
-                        <select name="" class="estados"><option value="default">Selecione um Estado</option></select>
+                        <label for="estado">Estado</label>
+                        <select name="estado" class="estados" required><option value="default">Selecione um Estado</option></select>
                     </div>
                     <div class="form">
                         <label for="">Município</label>
-                        <select name="" class="municipios" disabled='true'><option>Selecione um Municipio</option></select>
+                        <select name="" class="municipios" disabled='true' required><option>Selecione um Municipio</option></select>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="form">
                      <label for="">Telefone</label>
-                     <input type="tel">
+                     <input type="tel" required autocomplete="tel">
                     </div>
 
                     <div class="form">
                     <label for="">Imagem</label>
-                    <input type="file" accept=".jpg,.svg,.jpeg,.png">
+                    <input type="file" accept=".jpg,.svg,.jpeg,.png" required>
                     </div>
                 </div>
                 
 
                 <div class="form">
                     <label for="">Descrição</label>
-                    <textarea name="" id="" cols="20" rows="5"></textarea>
+                    <textarea name="" id="" cols="20" rows="5" required></textarea>
                 </div>
 
                <div class="submit">

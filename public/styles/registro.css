@@ -120,6 +120,14 @@ section form .form input, section form .form select, section form .form textarea
   font-size: 16px;
   border-radius: 8px;
   outline: none;
+  position: relative;
+}
+
+section form .form input:focus:not(select), section form .form select:focus:not(select), section form .form textarea:focus:not(select) {
+  background: url("../assets/img/pet-ball.svg") no-repeat #f0f0f5;
+  background-position: 5px;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 section form .form select {
@@ -159,5 +167,14 @@ section form .submit button {
   font-size: 16px;
   border: 0;
   margin-bottom: 35px;
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+  -webkit-transition: .7s ease;
+  transition: .7s ease;
+}
+
+section form .submit button:hover {
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
 }
 /*# sourceMappingURL=registro.css.map */
