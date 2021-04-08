@@ -1,8 +1,29 @@
 const express = require('express');
+
 const app = express();
+
 const handlebars = require('express-handlebars')
+
 const bodyParser = require("body-parser");
+
 const Cachorro = require("./models/Doguinho")
+
+const multer = require("multer")
+
+const path = require('path')
+
+const {uuid} = require("uuidv4")
+
+const uploadFolder = path.resolve(__dirname + '/uploads')
+
+const upload = multer ({
+    storage:multer.diskStorage({
+        destination:uploadFolder,
+        filename:(req,file,callback)=>callback(null,uuid() + path.extname(file.originalname))
+    })
+})
+
+
 //Config
     //Body-Parser
         app.use(bodyParser.json())
@@ -13,6 +34,7 @@ const Cachorro = require("./models/Doguinho")
 
     //Static
         app.use(express.static('public'))
+        app.use("/imagens",express.static(uploadFolder))
 
 //Rotas
     //Get
@@ -31,7 +53,7 @@ const Cachorro = require("./models/Doguinho")
             })
         })
     //Post
-        app.post("/registro-doguinho",(req,res)=>{
+        app.post("/registro-doguinho",upload.single('imagem'),(req,res)=>{
             Cachorro.create({
                 nome:req.body.nome,
                 idade:req.body.idade,
