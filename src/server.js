@@ -7,21 +7,34 @@ const handlebars = require('express-handlebars')
 const bodyParser = require("body-parser");
 
 const Cachorro = require("./models/Doguinho")
-
-const multer = require("multer")
-
 const path = require('path')
-
-const {uuid} = require("uuidv4")
-
-const uploadFolder = path.resolve(__dirname + '/uploads')
-
-const upload = multer ({
-    storage:multer.diskStorage({
-        destination:uploadFolder,
-        filename:(req,file,callback)=>callback(null,uuid() + path.extname(file.originalname))
-    })
+const aws = require("aws-sdk");
+const multer = require('multer');
+const multerS3 = require('multer-s3');
+const { uuid } = require('uuidv4');
+aws.config.update({
+    accessKeyId:'AKIA4ZJTGQ2VLYZ6IRCW',
+    secretAccessKey:'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',
+    region:'sa-east-1',
+    
 })
+const s3 = new aws.S3();
+
+const upload = multer({
+    storage:multerS3({
+        s3,
+        bucket:"canil-images",
+        acl:'public-read',
+        key(req,file,callback){
+            callback(null,uuid() + path.extname(file.originalname))
+        }
+
+    })
+
+})
+
+
+
 
 
 //Config
@@ -53,7 +66,7 @@ const upload = multer ({
         })
     //Post
         app.post("/registro-doguinho",upload.single('imagem'),(req,res)=>{
-            console.log(req.body);
+            console.log(req);
             Cachorro.create({
                 nome:req.body.nome,
                 idade:req.body.idade,
@@ -61,7 +74,7 @@ const upload = multer ({
                 raca:req.body.raca,
                 estado:req.body.estado,
                 municipio:req.body.municipio,
-                imagem:req.body.imagem,
+                imagem:"https://canil-images.s3-sa-east-1.amazonaws.com/"+req.file.key,
                 descricao:req.body.descricao
             }).then(()=>{
                 res.redirect("/")
