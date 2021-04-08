@@ -34,7 +34,6 @@ const upload = multer ({
 
     //Static
         app.use(express.static('public'))
-        app.use("/imagens",express.static(uploadFolder))
 
 //Rotas
     //Get
@@ -54,6 +53,7 @@ const upload = multer ({
         })
     //Post
         app.post("/registro-doguinho",upload.single('imagem'),(req,res)=>{
+            console.log(req.body);
             Cachorro.create({
                 nome:req.body.nome,
                 idade:req.body.idade,
