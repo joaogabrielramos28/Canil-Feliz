@@ -13,7 +13,7 @@ const Cachorro = conexao.sequelize.define('cachorros',{
     telefone:{
         type:conexao.Sequelize.STRING
     },
-    raça:{
+    raca:{
         type:conexao.Sequelize.STRING
     },
     descricao:{
@@ -28,5 +28,7 @@ const Cachorro = conexao.sequelize.define('cachorros',{
 
 
 })
+
+module.exports = Cachorro
 //Criando banco de dados
-//Cachorro.sync({force:true})
+// Cachorro.sync({force:true})

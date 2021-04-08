@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const handlebars = require('express-handlebars')
 const bodyParser = require("body-parser");
-const { static } = require('express');
+const Cachorro = require("./models/Doguinho")
 //Config
     //Body-Parser
         app.use(bodyParser.json())
@@ -20,12 +20,32 @@ const { static } = require('express');
             res.render('home')
         })
 
+
         app.get("/registro-doguinho",(req,res)=>{
             res.render('registro')
         })
 
         app.get("/doguinhos",(req,res)=>{
-            res.render("dogs")
+            Cachorro.findAll({order:[['id','desc']]}).then((cachorros)=>{
+                res.render("dogs",{cachorros:cachorros});
+            })
+        })
+    //Post
+        app.post("/registro-doguinho",(req,res)=>{
+            Cachorro.create({
+                nome:req.body.nome,
+                idade:req.body.idade,
+                telefone:req.body.telefone,
+                raca:req.body.raca,
+                estado:req.body.estado,
+                municipio:req.body.municipio,
+                imagem:req.body.imagem,
+                descricao:req.body.descricao
+            }).then(()=>{
+                res.redirect("/")
+            }).catch((erro)=>{
+                res.render(erro)
+            })
         })
     
 

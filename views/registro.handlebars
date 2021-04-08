@@ -11,7 +11,7 @@
 <section>
     <div class="cadastro">
         <h1>Cadastro de doguinho</h1>
-         <form action="">
+         <form action="/registro-doguinho" method="POST">
              <legend><h3>Dados do doguinho</h3></legend>
                  <div class="form">
                      <label for="nome">Nome</label>
@@ -20,7 +20,7 @@
                 <div class="form-group">
                  <div class="form">
                      <label for="raça">Raça</label>
-                     <input type="text" required name="raça">
+                     <input type="text" required name="raca">
                  </div>
                  <div class="form">
                      <label for="idade">Idade</label>
@@ -47,7 +47,7 @@
 
                     <div class="form">
                     <label for="imagem">Imagem</label>
-                    <input type="file" name="imagem" accept=".jpg,.svg,.jpeg,.png" required>
+                    <input  type="file" name="imagem" accept=".jpg,.svg,.jpeg,.png">
                     </div>
                 </div>
                 

@@ -8,7 +8,7 @@ function pegaEstados() {
         for (i = 0; i < data.length; i++) {
           const option = document.createElement("option");
           option.textContent = data[i].sigla;
-          option.setAttribute("value", data[i].id);
+          option.setAttribute("value", data[i].sigla);
           select.appendChild(option);
         }
         console.log(data);
@@ -24,6 +24,7 @@ const selectMunicipio = document.querySelector(".municipios");
 
 // * Pegando os municipios de acordo com a mudança de evento dos estados
 select.addEventListener("change", () => {
+  console.log(select.value);
   function pegaCidades(estado) {
     selectMunicipio.disabled = "true";
     fetch(
