@@ -1,5 +1,5 @@
 const express = require('express');
-
+require('dotenv').config()
 const app = express();
 
 const handlebars = require('express-handlebars')
@@ -13,8 +13,8 @@ const multer = require('multer');
 const multerS3 = require('multer-s3');
 const { uuid } = require('uuidv4');
 aws.config.update({
-    accessKeyId:'AKIA4ZJTGQ2VLYZ6IRCW',
-    secretAccessKey:'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',
+    accessKeyId:process.env.AWS_ACCESS_KEY,
+    secretAccessKey:process.env.AWS_SECRET_KEY,
     region:'sa-east-1',
     
 })
@@ -23,7 +23,7 @@ const s3 = new aws.S3();
 const upload = multer({
     storage:multerS3({
         s3,
-        bucket:"canil-images",
+        bucket:process.env.AWS_BUCKET,
         acl:'public-read',
         key(req,file,callback){
             callback(null,uuid() + path.extname(file.originalname))
