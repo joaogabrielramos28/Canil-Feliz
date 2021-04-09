@@ -1,18 +1,55 @@
+<link rel="stylesheet" href="styles/dogs.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+
 <h2 style="text-align: center">Em Construção !a </h2>
 
-{{#each cachorros}}
-
-<h2>{{dataValues.nome}}</h2>
-<h2>{{dataValues.raca}}</h2>
-<h2>{{dataValues.idade}}</h2>
-<img src={{dataValues.imagem}} alt="">
-<h2>{{dataValues.telefone}}</h2>
-<h2>{{dataValues.estado}}</h2>
-<h2>{{dataValues.municipio}}</h2>
-<h2>{{dataValues.descricao}}</h2>
-2
-<hr>
+<div class="cards">
 
 
+    {{#each cachorros}}
 
-{{/each}}
+
+    <div class="card">
+        <img src="{{dataValues.imagem}}" alt="imagem de um {{dataValues.raca}}">
+
+        <div class="card-title">
+            <h3>{{dataValues.nome}}</h3>
+        </div>
+        <div class="card-content">
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pellentesque mattis urna, nec posuere
+                elit porttitor at. Ut condimentum fringilla. </p>
+        </div>
+
+        <div class="card-footer">
+            <div class="stats-1">
+                <p>{{dataValues.idade}}</p>
+                <span>Idade</span>
+            </div>
+            <div class="stats-2">
+                <p>Macho</p>
+                <span>Gênero</span>
+            </div>
+            <div class="stats-3">
+                <p>{{dataValues.raca}}</p>
+                <span>Raça</span>
+            </div>
+        </div>
+    </div>
+    {{!-- <h2>{{dataValues.nome}}</h2>
+    <h2>{{dataValues.raca}}</h2>
+    <h2>{{dataValues.idade}}</h2>
+    <img src={{dataValues.imagem}} alt="">
+    <h2>{{dataValues.telefone}}</h2>
+    <h2>{{dataValues.estado}}</h2>
+    <h2>{{dataValues.municipio}}</h2>
+    <h2>{{dataValues.descricao}}</h2> --}}
+
+
+
+
+
+    {{/each}}
+
+
+</div>

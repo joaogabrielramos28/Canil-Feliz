@@ -141,6 +141,7 @@ section form .form label {
 }
 
 section form .form input[type='file'] {
+  max-width: 286px;
   padding: 7px 10px;
 }
 
