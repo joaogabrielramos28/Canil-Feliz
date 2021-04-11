@@ -144,6 +144,7 @@ section form .form input:focus:not(select), section form .form select:focus:not(
   background-position: 5px;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+  border-bottom: 1px solid #00b0ff;
 }
 
 section form .form select {

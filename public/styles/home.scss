@@ -5,18 +5,17 @@
   font-family: "Montserrat", sans-serif;
 
   text-decoration: none;
+  z-index: 1;
 }
 
 body {
   overflow: hidden;
-  background: #ffff;
-  background: url(/assets/img/bg.jpg);
-  background-position:left;
+  z-index: 1;
 }
+
 
 nav {
   padding-top: 15px;
-  max-width: 1400px;
 
   .menu-list {
     display: flex;
@@ -57,114 +56,28 @@ nav {
   }
 }
 
-
-section {
-  position: relative;
-  .hero-1{
+.bg-video{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
-  margin-top: 50px;
-  align-items: flex-start;
-  padding: 20px;
-  max-width:1000px !important;
-  height: 100vh;
-
-  .section-title{
-    text-align:start;
-    letter-spacing: .5px;
-    font-family: "Poppins", sans-serif;
-    font-size: 2rem;
+  align-items: center;
+  z-index:-1;
+  .bg{
+    filter: brightness(0.3);
   }
-
-  .section-description{
-    letter-spacing: 1.5px;
-    line-height: 30px;
-    width:550PX;
-  }
-    .search {
-      margin-top: 15px;
-      padding: 10px;
-      border-radius: 5px;
-      outline: none;
-      border: none;
-      background: #4ad295;
-      color: #ffff;
-      width: 32%;
-      height: 8vh;
-      position: relative;
-      font-family: "Poppins", sans-serif;
-      font-size: 0.9rem;
-      text-align: end;
-      letter-spacing: .2px;
-    }
-    .search::before {
-      content: url(../assets/img/paw.svg);
-      border-radius: 5px 0 0 5px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 50px;
-      background-color: #43bb85;
-    }
-
-    .search:hover{
-      transform:scale(1.02)
-    }
-
-    
-    .images-section {
-      display: flex;
-      img {
-        width: 220px;
-      }
-
-      #shiba {
-        transform: translate3d(-150px, 5px, 0);
-      }
-
-      #corgi{
-        transform: translateX(-60px);
-      }
-    }
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
+  h2{
+    color: #FFFF;
   }
-    .floating{
-      position: absolute;
-      width: 200px;
-      right:100px;
-      top:20px;
-      animation: moveon 5s infinite;
-    }
-    .ballon{
-      position: absolute;
-      width: 200px;
-      right: 250px;
-      top:20px;
-      animation: floating 5s infinite;
-    }
+
 }
 
-
-@keyframes moveon {
-  0%{
-    transform: translateX(0px);
-  }50%{
-    transform: translateX(20px);
-  }100%{
-    transform: translateX(0px);
-  }
-}
-
-@keyframes floating {
-  0%{
-    top: 0px;
-  }50%{
-    top: 40px;
-  }100%{
-    top: 0px;
-  }
-}

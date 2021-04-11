@@ -5,18 +5,16 @@
           box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
+  z-index: 1;
 }
 
 body {
   overflow: hidden;
-  background: #ffff;
-  background: url(/assets/img/bg.jpg);
-  background-position: left;
+  z-index: 1;
 }
 
 nav {
   padding-top: 15px;
-  max-width: 1400px;
 }
 
 nav .menu-list {
@@ -67,171 +65,40 @@ nav .menu-list :hover ::after {
   transition: 2s ease;
 }
 
-section {
-  position: relative;
-}
-
-section .hero-1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-top: 50px;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  padding: 20px;
-  max-width: 1000px !important;
-  height: 100vh;
-}
-
-section .hero-1 .section-title {
-  text-align: start;
-  letter-spacing: .5px;
-  font-family: "Poppins", sans-serif;
-  font-size: 2rem;
-}
-
-section .hero-1 .section-description {
-  letter-spacing: 1.5px;
-  line-height: 30px;
-  width: 550PX;
-}
-
-section .hero-1 .search {
-  margin-top: 15px;
-  padding: 10px;
-  border-radius: 5px;
-  outline: none;
-  border: none;
-  background: #4ad295;
-  color: #ffff;
-  width: 32%;
-  height: 8vh;
-  position: relative;
-  font-family: "Poppins", sans-serif;
-  font-size: 0.9rem;
-  text-align: end;
-  letter-spacing: .2px;
-}
-
-section .hero-1 .search::before {
-  content: url(../assets/img/paw.svg);
-  border-radius: 5px 0 0 5px;
+.bg-video {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 50px;
-  background-color: #43bb85;
+  z-index: -1;
 }
 
-section .hero-1 .search:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
+.bg-video .bg {
+  -webkit-filter: brightness(0.3);
+          filter: brightness(0.3);
 }
 
-section .hero-1 .images-section {
+section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-section .hero-1 .images-section img {
-  width: 220px;
-}
-
-section .hero-1 .images-section #shiba {
-  -webkit-transform: translate3d(-150px, 5px, 0);
-          transform: translate3d(-150px, 5px, 0);
-}
-
-section .hero-1 .images-section #corgi {
-  -webkit-transform: translateX(-60px);
-          transform: translateX(-60px);
-}
-
-section .floating {
-  position: absolute;
-  width: 200px;
-  right: 100px;
-  top: 20px;
-  -webkit-animation: moveon 5s infinite;
-          animation: moveon 5s infinite;
-}
-
-section .ballon {
-  position: absolute;
-  width: 200px;
-  right: 250px;
-  top: 20px;
-  -webkit-animation: floating 5s infinite;
-          animation: floating 5s infinite;
-}
-
-@-webkit-keyframes moveon {
-  0% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
-  50% {
-    -webkit-transform: translateX(20px);
-            transform: translateX(20px);
-  }
-  100% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
-}
-
-@keyframes moveon {
-  0% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
-  50% {
-    -webkit-transform: translateX(20px);
-            transform: translateX(20px);
-  }
-  100% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
-}
-
-@-webkit-keyframes floating {
-  0% {
-    top: 0px;
-  }
-  50% {
-    top: 40px;
-  }
-  100% {
-    top: 0px;
-  }
-}
-
-@keyframes floating {
-  0% {
-    top: 0px;
-  }
-  50% {
-    top: 40px;
-  }
-  100% {
-    top: 0px;
-  }
+section h2 {
+  color: #FFFF;
 }
 /*# sourceMappingURL=home.css.map */
