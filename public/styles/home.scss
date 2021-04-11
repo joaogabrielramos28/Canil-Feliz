@@ -13,7 +13,6 @@ body {
   z-index: 1;
 }
 
-
 nav {
   padding-top: 15px;
 
@@ -24,12 +23,12 @@ nav {
     margin: 0 50px;
 
     a {
-      color: #4ad295;
+      color: #ffff;
       position: relative;
     }
 
-    img{
-      width:70px;
+    img {
+      width: 70px;
     }
     span {
       position: relative;
@@ -56,7 +55,7 @@ nav {
   }
 }
 
-.bg-video{
+.bg-video {
   width: 100%;
   position: absolute;
   top: 0;
@@ -65,8 +64,8 @@ nav {
   overflow: hidden;
   display: flex;
   align-items: center;
-  z-index:-1;
-  .bg{
+  z-index: -1;
+  .bg {
     filter: brightness(0.3);
   }
 }
@@ -74,10 +73,74 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  h2{
-    color: #FFFF;
-  }
+  height: 100vh;
 
+  .hero-1 {
+    height: 70vh;
+    .hero-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      h2 {
+        letter-spacing: 1.7px;
+        text-align: center;
+        color: #ffff;
+        font-size: 3rem;
+        animation: textAppear .7s ease;
+      }
+    }
+
+    .hero-content {
+      p {
+        width: 100%;
+        font-size: 1.5rem;
+        color: #ffff;
+        letter-spacing: 1.3px;
+        margin-top: 25px;
+        animation: contentAppear 1S ease;
+      }
+    }
+
+    .hero-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 100px;
+      button {
+        text-transform: uppercase;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+        width: 170px;
+        color: #ffff;
+        background-color: #cb376a;
+        height: 45px;
+        position: relative;
+        transition: .7s ease;
+        &:hover{
+          background-color: transparent;
+          border:1px solid #cb376a;
+          stroke-dasharray: 1px 2px;
+        }
+
+      }
+    }
+  }
 }
 
+@keyframes textAppear{
+  from{
+    transform: translateX(-10000px);
+  }to{
+    transform: translateX(0px);
+  }
+}
+
+@keyframes contentAppear{
+  from{
+    transform: translateX(100000px);
+  }to{
+    transform: translateX(0px);
+  }
+}
