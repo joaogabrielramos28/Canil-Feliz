@@ -6,7 +6,8 @@
     font-family: "Montserrat", sans-serif;
 }
 body{
-    background-color: #f4f5f6;
+    // background-color: #b0e5fd;
+    background-image: url('/assets/img/register-bg.jpg');
 }
 .voltar{
     padding-top: 15px;
@@ -18,7 +19,7 @@ body{
         width: 70px;
     }
     .home-btn{
-        color: #4ad295;
+        color: #ffff;
         position: relative;
     }
 
@@ -51,6 +52,7 @@ section{
     margin:0 auto;
     max-width:750px;
     border-radius: 5px;
+    display: flex;
 
 
     .cadastro{
@@ -60,17 +62,28 @@ section{
         margin: 0 auto;
         
     }
-    h1{
-        text-align: center;
-        color: #000;
-    }
 
     form{
-        margin-top: 35px;
+        margin-top:20px;
 
         legend{
-            margin-bottom: 15px;
-            color: #000;
+            display: flex;
+            align-items: center;
+            margin-bottom: 36px;
+            color: #fff;
+            position: relative;
+            z-index: 1;
+            
+            &::after{
+                position: absolute;
+                content: "";
+                height: 40px;
+                width: 115%;
+                background-color: #00b0ff;
+                z-index: -2;
+                left: -90px;
+            }
+            
         }
         .form-group{
             display: flex;
@@ -128,7 +141,7 @@ section{
                 height: 56px;
                 border-radius: 5px;
     
-                background-color: #4ad295;
+                background-color: #00b0ff;
     
                 color: white;
                 font-weight: bold;
@@ -148,5 +161,6 @@ section{
         }
         
     }
+
 }
 
