@@ -64,6 +64,10 @@ const upload = multer({
                 res.render("dogs",{cachorros:cachorros});
             })
         })
+
+        app.get("/*",(req,res)=>{
+            res.render("404")
+        })
     //Post
         app.post("/registro-doguinho",upload.single('imagem'),(req,res)=>{
             console.log(req);
