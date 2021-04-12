@@ -15,7 +15,6 @@ body {
 
 nav {
   padding-top: 15px;
-
   .menu-list {
     display: flex;
     justify-content: space-between;
@@ -28,7 +27,7 @@ nav {
     }
 
     img {
-      width: 70px;
+      width:100px
     }
     span {
       position: relative;
@@ -106,22 +105,30 @@ section {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: 100px;
+      margin-top: 80px;
       button {
+        animation: buttonAppear 2s ease-in;
         text-transform: uppercase;
         border-radius: 8px;
         border: none;
         outline: none;
-        width: 170px;
+        width: 150px;
         color: #ffff;
         background-color: #cb376a;
         height: 45px;
         position: relative;
         transition: .7s ease;
+        position: relative;
         &:hover{
           background-color: transparent;
           border:1px solid #cb376a;
           stroke-dasharray: 1px 2px;
+        }
+        &::after{
+          position:absolute;
+          content: url('/assets/img/paw.svg');
+          top:1.8vh;
+          left:2vh;
         }
 
       }
@@ -142,5 +149,14 @@ section {
     transform: translateX(100000px);
   }to{
     transform: translateX(0px);
+  }
+}
+
+@keyframes buttonAppear{
+  from{
+    background-color: transparent;
+    border: 1px solid #cb376a;
+  }to{
+    background-color: #cb376a;
   }
 }

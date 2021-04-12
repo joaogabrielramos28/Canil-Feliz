@@ -36,7 +36,7 @@ nav .menu-list a {
 }
 
 nav .menu-list img {
-  width: 70px;
+  width: 100px;
 }
 
 nav .menu-list span {
@@ -144,27 +144,37 @@ section .hero-1 .hero-button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 section .hero-1 .hero-button button {
+  -webkit-animation: buttonAppear 2s ease-in;
+          animation: buttonAppear 2s ease-in;
   text-transform: uppercase;
   border-radius: 8px;
   border: none;
   outline: none;
-  width: 170px;
+  width: 150px;
   color: #ffff;
   background-color: #cb376a;
   height: 45px;
   position: relative;
   -webkit-transition: .7s ease;
   transition: .7s ease;
+  position: relative;
 }
 
 section .hero-1 .hero-button button:hover {
   background-color: transparent;
   border: 1px solid #cb376a;
   stroke-dasharray: 1px 2px;
+}
+
+section .hero-1 .hero-button button::after {
+  position: absolute;
+  content: url("/assets/img/paw.svg");
+  top: 1.8vh;
+  left: 2vh;
 }
 
 @-webkit-keyframes textAppear {
@@ -208,6 +218,26 @@ section .hero-1 .hero-button button:hover {
   to {
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes buttonAppear {
+  from {
+    background-color: transparent;
+    border: 1px solid #cb376a;
+  }
+  to {
+    background-color: #cb376a;
+  }
+}
+
+@keyframes buttonAppear {
+  from {
+    background-color: transparent;
+    border: 1px solid #cb376a;
+  }
+  to {
+    background-color: #cb376a;
   }
 }
 /*# sourceMappingURL=home.css.map */
