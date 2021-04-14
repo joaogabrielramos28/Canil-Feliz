@@ -161,6 +161,7 @@ section .hero-1 .hero-button button {
   position: relative;
   -webkit-transition: .7s ease;
   transition: .7s ease;
+  cursor: pointer;
   position: relative;
 }
 
