@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="styles/dogs.css">
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
 <h2 style="text-align: center">Em Construção !a </h2>
 
@@ -9,40 +9,12 @@
 
     {{#each cachorros}}
 
-
     <div class="card">
-        <img src="{{dataValues.imagem}}" alt="imagem de um {{dataValues.raca}}">
+        <div class="card-image">
+            <img src="{{dataValues.imagem}}" alt="">
 
-        <div class="card-title">
-            <h3>{{dataValues.nome}}</h3>
-        </div>
-        <div class="card-content">
-            <p class="description">{{dataValues.descricao}}</p>
-        </div>
-
-        <div class="card-footer">
-            <div class="stats-1">
-                <p>{{dataValues.idade}}</p>
-                <span>Idade</span>
-            </div>
-            <div class="stats-2">
-                <p>{{dataValues.raca}}</p>
-                <span>Raça</span>
-            </div>
-            <div class="stats-3">
-                <p>{{dataValues.estado}}</p>
-                <span>Estado</span>
-            </div>
         </div>
     </div>
-    {{!-- <h2>{{dataValues.nome}}</h2>
-    <h2>{{dataValues.raca}}</h2>
-    <h2>{{dataValues.idade}}</h2>
-    <img src={{dataValues.imagem}} alt="">
-    <h2>{{dataValues.telefone}}</h2>
-    <h2>{{dataValues.estado}}</h2>
-    <h2>{{dataValues.municipio}}</h2>
-    <h2>{{dataValues.descricao}}</h2> --}}
 
 
 
